@@ -9,7 +9,7 @@ gcc -o makva makva.c
 gcc -o badue badue.c
 ```
 ### Run Badue
-```
+
 Solves a fork-join queues with homogenous server service rates according to Badue et. al. 2010.
 
 Input metrics are p (number of slave servers), lambda (arrival rate in open networks, throughput in closed networks), and service times for master and slave servers. If historical data is available, one can simply input the average response time of servers instead. 
@@ -17,7 +17,7 @@ Input metrics are p (number of slave servers), lambda (arrival rate in open netw
 If another measurement is available (eg. utilization), then first compute service times with system laws (eg. S = U/X).                   
 
 Output metrics are lower and upper bounds on system response times.
-```
+
 #####Sample output:
 ```
 0.402488 <= R <= 1.035577
@@ -39,7 +39,7 @@ Output metrics are lower and upper bounds on system response times.
 ./badue -p 8 -r 0.0 0.475
 ```
 ### Run Makva/Lundstrom
-```
+
 Approximate Mean Value Analysis for closed queueing networks.
 
 Solves a closed queuing network through modified MVA according to Mak & Lundstrom 1990 and Liang & Tripathi 2000.
@@ -47,7 +47,7 @@ Solves a closed queuing network through modified MVA according to Mak & Lundstro
 Input metrics are N (number of tasks), C (number of service centers), epsilon (error tolerance), average response time for each task,service demand for each task and  the matrix of task overlaps, which should be calculated from the task graph in a previous step.     
 
 Output metric is the total job response time.
-```
+
 #####Sample output:
 ```
 R = 2.584088
