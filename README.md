@@ -18,23 +18,23 @@ If another measurement is available (eg. utilization), then first compute servic
 
 Output metrics are lower and upper bounds on system response times.
 ```
-#Sample output:
+#####Sample output:
 ```
 0.402488 <= R <= 1.035577
 ```
-#Parameters:
+#####Parameters:
 ```
 -p Number of slave servers
 -l Task arrival rate or throughput
 -s Average service times for master and slave servers
 -r Average response times for master and slave servers (optional and mutually exclusive with -l -s)
 ```
-#Format:
+#####Format:
 ```
   ./badue -p <num servers> -l <arrival rate> -s <service time of master>
   <service time of slave> -r <response time of master> <response time of slave>
 ```
-#Example:
+#####Example:
 ```
 ./badue -p 8 -r 0.0 0.475
 ```
@@ -48,11 +48,11 @@ Input metrics are N (number of tasks), C (number of service centers), epsilon (e
 
 Output metric is the total job response time.
 ```
-#Sample output:
+#####Sample output:
 ```
 R = 2.584088
 ```
-#Parameters:
+#####Parameters:
 ```
 -N Number of tasks
 -C Number of servers\n\
@@ -61,11 +61,11 @@ R = 2.584088
 -s Log file containing service demands for each task\n\
 -o File containing the task overlap matrix\
 ```
-#Format:
+#####Format:
 ```
 ./makva -N <num tasks> -C <num centers> -e <error> -r <log_response.txt> -s <log_demand.txt> -o <log_overlap.txt>
 ```
-#Example:
+#####Example:
 ```
 ./makva -N 4 -C 1 -e 2.5 -r response.txt -s demand.txt -o overlap.txt
 ```
