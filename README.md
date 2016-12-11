@@ -7,8 +7,9 @@ git clone git@github.com:eubr-bigsea/network-queuing-models.git
 cd network-queuing-models
 gcc -o makva makva.c
 gcc -o badue badue.c
-
+```
 ### Run Badue
+```
 Solves a fork-join queues with homogenous server service rates according to Badue et. al. 2010.
 
 Input metrics are p (number of slave servers), lambda (arrival rate in open networks, throughput in closed networks), and service times for master and slave servers. If historical data is available, one can simply input the average response time of servers instead. 
@@ -32,8 +33,9 @@ Output metrics are lower and upper bounds on system response times.
 
 #Example:
 ./badue -p 8 -r 0.0 0.475
-
+```
 ### Run Makva/Lundstrom
+```
 Approximate Mean Value Analysis for closed queueing networks.
 
 Solves a closed queuing network through modified MVA according to Mak & Lundstrom 1990 and Liang & Tripathi 2000.
@@ -58,3 +60,4 @@ R = 2.584088
 
 #Example:
 ./makva -N 4 -C 1 -e 2.5 -r response.txt -s demand.txt -o overlap.txt
+```
