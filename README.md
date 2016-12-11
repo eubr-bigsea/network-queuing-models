@@ -38,7 +38,7 @@ Output metrics are lower and upper bounds on system response times.
 ```
 ./badue -p 8 -r 0.0 0.475
 ```
-### Run Makva/Lundstrom
+### Run Mak/Lundstrom
 
 Approximate Mean Value Analysis for closed queueing networks.
 
